@@ -1,0 +1,68 @@
+{
+  "lang": { "title": "Langue" },
+  "nav": { "home": "Accueil", "catalogue": "Catalogue", "account": "Mon compte", "login": "Se connecter", "logout": "Se déconnecter" },
+  "home": {
+    "title": "Votre robe kabyle, confectionnée sur mesure par des couturières de Tizi Ouzou",
+    "subtitle": "Choisissez un modèle, personnalisez les tissus, les sfifas et les broderies, puis suivez la confection jusqu'à la livraison.",
+    "cta": "Voir le catalogue",
+    "deposit": "Vous versez une avance de {{pct}} % pour lancer la commande.",
+    "quality": "Chaque robe est contrôlée avant l'envoi.",
+    "balance": "Vous réglez le solde seulement quand la robe est prête et conforme."
+  },
+  "catalogue": {
+    "title": "Catalogue",
+    "empty": "Aucun modèle n'est publié pour le moment. Revenez bientôt.",
+    "from": "À partir de {{price}}"
+  },
+  "auth": {
+    "login": "Se connecter",
+    "register": "Créer mon compte",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe (8 caractères minimum)",
+    "fullName": "Nom et prénom",
+    "phone": "Téléphone",
+    "checkEmail": "Compte créé. Ouvrez le lien de confirmation envoyé par e-mail, puis connectez-vous.",
+    "switchToRegister": "Pas encore de compte ? Créer un compte",
+    "switchToLogin": "Déjà un compte ? Se connecter"
+  },
+  "account": {
+    "title": "Mon compte",
+    "save": "Enregistrer",
+    "saved": "Modifications enregistrées.",
+    "orders": "Mes commandes",
+    "noOrders": "Vous n'avez pas encore de commande."
+  },
+  "common": {
+    "loading": "Chargement…",
+    "error": "L'opération a échoué. Vérifiez votre connexion et réessayez.",
+    "notFound": "Page introuvable",
+    "configMissing": "Configuration Supabase manquante : l'application ne peut pas se connecter à la base de données."
+  },
+  "order": {
+    "status": {
+      "panier": "Panier",
+      "attente_validation": "En attente de validation",
+      "avance_attente": "En attente de l'avance",
+      "validee": "Commande validée",
+      "approvisionnement": "Approvisionnement en cours",
+      "matieres_disponibles": "Matières disponibles",
+      "affectee": "Affectée à une couturière",
+      "fabrication": "Fabrication en cours",
+      "fabrication_terminee": "Fabrication terminée",
+      "controle_qualite": "Contrôle qualité",
+      "correction": "Correction en cours",
+      "conforme": "Conforme",
+      "attente_solde": "En attente du paiement du solde",
+      "paiement_integral": "Paiement intégral confirmé",
+      "emballage": "Préparation et emballage",
+      "expediee": "Expédiée",
+      "en_livraison": "En cours de livraison",
+      "livree": "Livrée",
+      "cloturee": "Clôturée",
+      "annulee": "Annulée",
+      "suspendue": "Suspendue",
+      "litige": "En litige",
+      "retournee": "Retournée"
+    }
+  }
+}

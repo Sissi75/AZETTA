@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+body { @apply bg-white text-ink font-body antialiased; }
+html[lang='ar'] body { font-family: 'Noto Naskh Arabic', 'Figtree', serif; font-size: 1.05rem; }
+html[lang='kab-Tfng'] body, html[lang='kab-Tfng'] h1, html[lang='kab-Tfng'] h2 { font-family: 'Noto Sans Tifinagh', 'Figtree', sans-serif; }
+html[lang='ar'] h1, html[lang='ar'] h2 { font-family: 'Noto Naskh Arabic', serif; font-weight: 600; }
+
+/* Bandeau de motifs triangulaires inspiré des tissages kabyles : l'élément signature de l'interface */
+.band {
+  height: 14px;
+  background-color: #fff;
+  background-repeat: repeat-x;
+  background-size: 28px 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cpath d='M0 14L7 0l7 14z' fill='%23F2B01E'/%3E%3Cpath d='M14 14L21 0l7 14z' fill='%231F7A5C'/%3E%3Cpath d='M7 0l7 14 7-14z' fill='%23C8372D'/%3E%3Cpath d='M-7 0l7 14 7-14z' fill='%232457A6'/%3E%3Cpath d='M21 0l7 14 7-14z' fill='%232457A6'/%3E%3C/svg%3E");
+}
+
+:focus-visible { outline: 3px solid #2457A6; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+.btn { @apply inline-flex items-center justify-center rounded-md bg-azure px-5 py-3 font-semibold text-white hover:bg-ink disabled:opacity-60; }
+.btn-ghost { @apply inline-flex items-center justify-center rounded-md border border-ink/30 px-4 py-2 font-medium hover:bg-surface; }
+.field { @apply w-full rounded-md border border-ink/30 bg-white px-3 py-2.5; }

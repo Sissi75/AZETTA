@@ -1,0 +1,5 @@
+{
+  "lang": { "title": "Fren tutlayt" },
+  "nav": { "home": "Asebter agejdan", "login": "Kcem", "logout": "Ffeɣ" },
+  "auth": { "email": "Imayl", "password": "Awal uffir" }
+}
