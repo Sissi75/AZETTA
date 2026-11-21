@@ -34,7 +34,7 @@ function imageUrl(path: string) {
 }
 
 function creditFor(model: Model) {
-  const name = String(model.name.fr ?? '').toLowerCase();
+  const name = String(model.name?.fr ?? '').toLowerCase();
   if (name.includes('amel')) return imageCredits.amel;
   if (name.includes('tiziri cérémonie') || name.includes('thiziri')) return imageCredits.thiziri;
   if (name.includes('tiziri')) return imageCredits.tiziri;
