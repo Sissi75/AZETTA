@@ -1,18 +1,28 @@
 {
-  "lang": { "title": "Langue" },
-  "nav": { "home": "Accueil", "catalogue": "Catalogue", "account": "Mon compte", "login": "Se connecter", "logout": "Se déconnecter" },
+  "lang": {
+    "title": "Langue"
+  },
+  "nav": {
+    "home": "Accueil",
+    "catalogue": "Catalogue",
+    "account": "Mon compte",
+    "login": "Se connecter",
+    "logout": "Se déconnecter"
+  },
   "home": {
     "title": "Votre robe kabyle, confectionnée sur mesure par des couturières de Tizi Ouzou",
     "subtitle": "Choisissez un modèle, personnalisez les tissus, les sfifas et les broderies, puis suivez la confection jusqu'à la livraison.",
     "cta": "Voir le catalogue",
     "deposit": "Vous versez une avance de {{pct}} % pour lancer la commande.",
     "quality": "Chaque robe est contrôlée avant l'envoi.",
-    "balance": "Vous réglez le solde seulement quand la robe est prête et conforme."
+    "balance": "Vous réglez le solde seulement quand la robe est prête et conforme.",
+    "chooseModel": "Choisissez un modèle à personnaliser"
   },
   "catalogue": {
     "title": "Catalogue",
     "empty": "Aucun modèle n'est publié pour le moment. Revenez bientôt.",
-    "from": "À partir de {{price}}"
+    "from": "À partir de {{price}}",
+    "customize": "Personnaliser"
   },
   "auth": {
     "login": "Se connecter",
@@ -64,5 +74,31 @@
       "litige": "En litige",
       "retournee": "Retournée"
     }
+  },
+  "configurator": {
+    "back": "Retour aux modèles",
+    "notFound": "Ce modèle n'existe pas ou n'est plus disponible.",
+    "preview": "Aperçu schématique de votre robe",
+    "previewNote": "Aperçu simplifié : il représente la couleur, la longueur, les manches et les décorations choisies.",
+    "required": "obligatoire",
+    "plus": "+ {{price}}",
+    "size": "Taille standard",
+    "sizeNone": "Je saisis mes mesures",
+    "measures": "Mes mensurations",
+    "measuresHint": "Vos mesures personnelles priment sur la taille standard choisie.",
+    "estimate": "Estimation du prix",
+    "total": "Total",
+    "partial": "Total partiel",
+    "detail": "Détail du calcul",
+    "labour": "Façon (confection)",
+    "fabricLine": "{{component}} : {{meters}} m × {{price}}",
+    "missingOption": "Choisir : {{name}}",
+    "missingMeasure": "Mesure à saisir : {{name}}",
+    "missingTariff": "Un tarif n'est pas encore renseigné pour ce choix.",
+    "needSize": "Choisissez une taille ou saisissez vos mensurations.",
+    "add": "Ajouter à ma commande",
+    "adding": "Ajout en cours…",
+    "loginToOrder": "Se connecter pour commander",
+    "addFailed": "L'ajout a échoué :"
   }
 }
