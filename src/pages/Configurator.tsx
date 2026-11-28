@@ -184,6 +184,37 @@ export default function Configurator() {
 
       <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,22rem)]">
         <div className="grid gap-8">
+          <fieldset className="grid gap-3">
+            <legend className="mb-1 font-display text-xl">{t('configurator.sizeTitle')}</legend>
+            {data.sizes.length > 0 && (
+              <label className="grid max-w-xs gap-1">
+                {t('configurator.size')}
+                <select className="field" value={sizeCode} onChange={(e) => setSizeCode(e.target.value)}>
+                  <option value="">{t('configurator.sizeNone')}</option>
+                  {data.sizes.map((s) => (
+                    <option key={s.code} value={s.code}>
+                      {s.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            )}
+            <p className="text-sm">{t('configurator.measuresHint')}</p>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {data.keys.map((k) => (
+                <label key={k.key} className="grid gap-1 text-sm">
+                  {tr(k.label, locale)} (cm)
+                  <input
+                    className="field"
+                    inputMode="decimal"
+                    value={measures[k.key] ?? ''}
+                    onChange={(e) => setMeasures((p) => ({ ...p, [k.key]: e.target.value }))}
+                  />
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
           {visibleGroups.map((g) => (
             <fieldset key={g.id} className="grid gap-3">
               <legend className="mb-1 font-display text-xl">
@@ -213,37 +244,6 @@ export default function Configurator() {
               </div>
             </fieldset>
           ))}
-
-          <fieldset className="grid gap-3">
-            <legend className="mb-1 font-display text-xl">{t('configurator.measures')}</legend>
-            {data.sizes.length > 0 && (
-              <label className="grid max-w-xs gap-1">
-                {t('configurator.size')}
-                <select className="field" value={sizeCode} onChange={(e) => setSizeCode(e.target.value)}>
-                  <option value="">{t('configurator.sizeNone')}</option>
-                  {data.sizes.map((s) => (
-                    <option key={s.code} value={s.code}>
-                      {s.label}
-                    </option>
-                  ))}
-                </select>
-              </label>
-            )}
-            <p className="text-sm">{t('configurator.measuresHint')}</p>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {data.keys.map((k) => (
-                <label key={k.key} className="grid gap-1 text-sm">
-                  {tr(k.label, locale)} (cm)
-                  <input
-                    className="field"
-                    inputMode="decimal"
-                    value={measures[k.key] ?? ''}
-                    onChange={(e) => setMeasures((p) => ({ ...p, [k.key]: e.target.value }))}
-                  />
-                </label>
-              ))}
-            </div>
-          </fieldset>
         </div>
 
         <aside className="grid content-start gap-5 lg:sticky lg:top-4 lg:self-start">

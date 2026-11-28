@@ -7,7 +7,8 @@
     "catalogue": "Catalogue",
     "account": "Mon compte",
     "login": "Se connecter",
-    "logout": "Se déconnecter"
+    "logout": "Se déconnecter",
+    "admin": "Administration"
   },
   "home": {
     "title": "Votre robe kabyle, confectionnée sur mesure par des couturières de Tizi Ouzou",
@@ -99,6 +100,114 @@
     "add": "Ajouter à ma commande",
     "adding": "Ajout en cours…",
     "loginToOrder": "Se connecter pour commander",
-    "addFailed": "L'ajout a échoué :"
+    "addFailed": "L'ajout a échoué :",
+    "sizeTitle": "Votre taille et vos mensurations"
+  },
+  "admin": {
+    "title": "Administration",
+    "nav": {
+      "models": "Modèles",
+      "options": "Composants",
+      "fabrics": "Tissus",
+      "sizes": "Tailles",
+      "settings": "Réglages"
+    },
+    "common": {
+      "new": "Nouveau",
+      "edit": "Modifier",
+      "save": "Enregistrer",
+      "saved": "Enregistré.",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "confirmDelete": "Supprimer cet élément ?",
+      "active": "Actif",
+      "inactive": "inactif",
+      "sortOrder": "Ordre d'affichage",
+      "code": "Code (sans espace)",
+      "name": "Nom",
+      "description": "Description",
+      "none": "—",
+      "image": "Image",
+      "invalid": "Champs invalides ou incomplets : renseignez au moins un nom, un code et un prix valides.",
+      "forbidden": "Accès réservé à l'administration.",
+      "uploading": "Envoi en cours…",
+      "addImage": "Ajouter une image",
+      "remove": "Retirer"
+    },
+    "models": {
+      "title": "Modèles de robes",
+      "slug": "Identifiant (minuscules, chiffres et tirets)",
+      "basePrice": "Prix de base : façon / confection (DA)",
+      "productionDays": "Délai de fabrication (jours)",
+      "images": "Photos du modèle",
+      "published": "Publié (visible par les clientes)",
+      "invalid": "Identifiant, nom et prix de base valides requis.",
+      "saveFirst": "Enregistrez d'abord le modèle pour choisir ses composants et définir ses règles de calcul du tissu.",
+      "available": "Composants proposés pour ce modèle",
+      "availableHint": "Cochez les composants que la cliente peut choisir pour ce modèle. Si aucun n'est coché, tous les composants actifs sont proposés.",
+      "rules": "Règles de calcul du tissu",
+      "rulesHint": "Une règle par composant en tissu (corps, manches…). Métrage = (mesure de longueur × facteur + marge) ÷ 100 × nombre de lés × pièces + métrage fixe, majoré de la chute, arrondi et au moins le minimum.",
+      "component": "Composant (nom)",
+      "sourceGroup": "Groupe dont le choix fournit le tissu",
+      "lengthKey": "Mesure de longueur utilisée",
+      "lengthAllowance": "Marge de longueur : couture, ourlet (cm)",
+      "factorGroup": "Groupe qui ajuste la longueur (ex. manches, longueur)",
+      "widthKey": "Mesure de largeur utilisée (facultatif)",
+      "ease": "Aisance (multiplicateur de la largeur)",
+      "widthAllowance": "Marge de largeur (cm)",
+      "pieces": "Nombre de pièces",
+      "extraMeters": "Métrage fixe ajouté (m)",
+      "waste": "Chute (%)",
+      "minMeters": "Métrage minimum (m)"
+    },
+    "options": {
+      "title": "Composants de la robe",
+      "hint": "Col, ceinture, longueur, manches, tissu, couleur, décorations : chaque choix proposé à la cliente est un composant, rangé dans un groupe.",
+      "group": "Groupe",
+      "groups": "Groupes de composants",
+      "priceDelta": "Supplément fixe (DA)",
+      "quality": "Qualité de tissu (prix au mètre)",
+      "pricePerMeter": "Prix au mètre propre à ce composant (DA, facultatif)",
+      "width": "Largeur du tissu / laize (cm)",
+      "lengthFactor": "Facteur de longueur",
+      "lengthFactorHint": "0 = aucune longueur de tissu (ex. sans manches). 1 = longueur entière. Laissez vide si non concerné.",
+      "color": "Couleur d'affichage",
+      "visual": "Rôle dans l'aperçu schématique",
+      "visualNone": "Sans manches",
+      "visualHalf": "Demi-manches",
+      "visualLong": "Longue (manches ou robe)",
+      "visualKnee": "Niveau du genou",
+      "disables": "Ce choix désactive ces groupes",
+      "required": "Choix obligatoire",
+      "multiple": "Choix multiple possible"
+    },
+    "fabrics": {
+      "title": "Qualités de tissu et prix",
+      "hint": "Prix de vente au mètre de chaque qualité (satin, velours…). Il sert au calcul du prix de la robe.",
+      "pricePerMeter": "Prix de vente au mètre (DA)"
+    },
+    "sizes": {
+      "title": "Tailles standard",
+      "hint": "Renseignez les mesures de chaque taille. La cliente peut choisir une taille, puis saisir ses propres mesures qui priment.",
+      "label": "Libellé",
+      "values": "Mesures de cette taille (cm)",
+      "measurementKeys": "Mensurations demandées",
+      "key": "Clé technique (minuscules, sans espace)",
+      "keyInvalid": "Clé invalide : minuscules, chiffres et _ uniquement, commençant par une lettre, avec un libellé.",
+      "hintLabel": "Aide à la prise de mesure"
+    },
+    "settings": {
+      "title": "Réglages",
+      "hint": "Ces valeurs s'appliquent aux nouvelles commandes. Les commandes déjà passées gardent les taux de leur date.",
+      "keys": {
+        "deposit_rate": "Taux de l'avance (0,30 = 30 %)",
+        "commission_rate": "Commission de la plateforme (0,15 = 15 %)",
+        "currency": "Devise",
+        "fabric_rounding_step": "Arrondi des métrages (mètres)",
+        "deposit_refundable_on_customer_cancel": "Avance remboursable en cas d'annulation par la cliente",
+        "default_locale": "Langue par défaut",
+        "pilot_target_seamstresses": "Objectif de couturières de la phase pilote"
+      }
+    }
   }
 }

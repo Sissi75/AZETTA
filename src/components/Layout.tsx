@@ -11,7 +11,7 @@ const linkClass = ({ isActive }: { isActive: boolean }) => `px-2 py-1 font-mediu
 
 export default function Layout() {
   const { t } = useTranslation();
-  const { session, signOut } = useAuth();
+  const { session, roles, signOut } = useAuth();
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -28,6 +28,11 @@ export default function Layout() {
             <NavLink to="/catalogue" className={linkClass}>
               {t('nav.catalogue')}
             </NavLink>
+            {roles.includes('admin') && (
+              <NavLink to="/admin" className={linkClass}>
+                {t('nav.admin')}
+              </NavLink>
+            )}
             {session ? (
               <>
                 <NavLink to="/compte" className={linkClass}>
